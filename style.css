@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+
+
+@font-face {
+    font-family: "nasalization";
+    src: url(Fonts/Nasalization\ Rg.otf);
+}
+
+body{
+    background-color:#11151c;
+}
+
+
+.heading{
+    font-family: "nasalization";
+    color:whitesmoke;
+    font-size:150px;
+    text-align:center;
+    transform:translate(-60px,-10px);
+
+}
+
+#header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url(Assets/website-banner.png);
+    height:155px;
+    width:100%;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+}
+
