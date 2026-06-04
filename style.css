@@ -21,7 +21,6 @@
     src: url(Fonts/polarix_0.ttf);
 }
 
-
 @font-face {
     font-family: 'Rostex';
     font-style: normal;
@@ -29,7 +28,6 @@
     src: local('Rostex'), url(Fonts/RostexOblique-7OROB.woff) format('woff');
     }
     
-
 @font-face {
     font-family: 'Rostex';
     font-style: normal;
@@ -37,7 +35,6 @@
     src: local('Rostex'), url(Fonts/RostexObliqueoutline-vnPm4.woff) format('woff');
     }
     
-
 @font-face {
     font-family: 'Rostex';
     font-style: normal;
@@ -45,7 +42,6 @@
     src: local('Rostex'), url(Fonts/RostexOutline-woLow.woff) format('woff');
     }
     
-
 @font-face {
     font-family: 'Rostex';
     font-style: normal;
@@ -55,48 +51,99 @@
 
 body{
     background-color:#11151C;
-}
-
-.heading{
-    font-family: "nasalization";
-    color:whitesmoke;
-    font-size:150px;
-    text-align:center;
-    transform:translate(-60px,-10px);
-    text-shadow: 
-    0 0 5px rgba(0, 0, 0, 0.8),
-    0 0 10px rgba(0, 0, 0, 0.6),
-    0 0 20px rgba(0, 0, 0, 0.4),
-    0 0 30px rgba(0, 0, 0, 0.2),
-    0 0 40px rgba(0, 0, 0, 0.1);
-    cursor:default;
-    
+    overflow-x: hidden;
 }
 
 #header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url(Assets/website-banner.png);
     height:155px;
-    max-width:100%;
+    width:100%;
     background-size:cover;
     background-position:center;
     position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 20px;
+}
+
+.heading{
+    font-family:"nasalization";
+    color:whitesmoke;
+    font-size:150px;
+    text-decoration:none;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+    margin:0;
+    flex-shrink:0;
+
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                text-shadow 0.25s ease;
+    transform-origin: bottom center;
+    cursor:pointer;
+}
+
+.heading:hover{
+    transform: scale(1.05);
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.6),
+        0 0 20px rgba(255,255,255,0.4),
+        0 0 30px rgba(255,255,255,0.3);
 }
 
 .SSC{
     width:140px;
     height:140px;
-    transform:translate(10px, -200px);
-}
-
-.ACREW{
-    max-width:497px;
-    width:100%;
-    transform:translate(910px, -193.2px)
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-50%);
 }
 
 .artemis-logo{
     width:140px;
-    transform:translate(10px, -200px)
+    position:absolute;
+    left:180px;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.SSC,
+.artemis-logo{
+    transition: transform 0.25s ease;
+    cursor:pointer;
+    z-index:20;
+}
+
+.SSC,
+.artemis-logo{
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1), 
+                filter 0.25s ease;
+    transform-origin: bottom center;
+    cursor:pointer;
+}
+
+.SSC:hover,
+.artemis-logo:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+}
+
+.SSC:hover,
+.artemis-logo:hover{
+    transform: scale(1.05);
+}
+
+.ACREW{
+    width:458px;
+    position:absolute;
+    right:20px;
+    top:50%;
+    transform:translateY(-50%);
 }
 
 #navbar{
@@ -109,6 +156,7 @@ body{
     align-items:center;
     gap:25px;
     font-family:'Rostex';
+    z-index:10;
 }
 
 .nav-item a,
@@ -122,6 +170,17 @@ body{
     cursor:pointer;
     display:flex;
     align-items:center;
+}
+
+#navbar .nav-item a,
+#navbar .dropdownbtn{
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#navbar .nav-item a:hover,
+#navbar .dropdownbtn:hover{
+    transform: scale(1.05);
+    text-shadow: 0 0 8px rgba(255,255,255,0.5);
 }
 
 .sep{
@@ -147,6 +206,7 @@ body{
     left:0;
     text-align:center;
     font-size:small;
+    z-index:20;
 }
 
 .drop-content a{
@@ -157,4 +217,42 @@ body{
 
 .drop:hover .drop-content{
     display:block;
+}
+
+#infosection1{
+    background-image:url(Assets/SLS-Launching.jpg);
+    height:900px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items: left;
+
+}
+
+.infoheading{
+    font-family:'Rostex';
+    font-size:60px;
+    z-index:10;
+    color:white;
+    transform:translate(94px, 100px);
+    
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+}
+
+#informationsection{
+    width:800px;
+    transform:translate(-660px, 170px);
+}
+
+.information1{
+    font-family:"Polarix";
+    color:white;
+    font-size:30px;
+    text-align:center;
 }
