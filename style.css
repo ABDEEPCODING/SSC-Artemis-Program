@@ -236,7 +236,6 @@ body{
     z-index:10;
     color:white;
     transform:translate(94px, 100px);
-    
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -255,4 +254,73 @@ body{
     color:white;
     font-size:30px;
     text-align:center;
+}
+
+
+#infosection2{
+    background-image: url(Assets/SLS_Home.jpg);
+    height:900px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items:left;   
+    
+}
+
+.information2{
+    font-family:"Polarix";
+    color:white;
+    font-size:30px;
+    text-align:center;
+    transform:translateX(210px)
+}
+
+#infosection3{
+    background-image: url(Assets/Orion.jpg);
+    height:900px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items:left;
+}
+
+.infoheading-III{
+    font-family:'Rostex';
+    font-size:60px;
+    z-index:10;
+    color:white;
+    transform:translate(1100px, 100px);
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);    
+}
+
+.information3{
+    font-family:"Polarix";
+    color:white;
+    font-size:30px;
+    text-align:center;
+    transform:translateX(1070px )
+}
+
+.interactive-hyperlink{
+    font-size:20px;
+    width:650px;
+    height:50px;
+    transform:translate(100px,20px);
+    background-color:#D66853;
+    font-family:'Rostex';
+    border-radius:10px;
+    
+}
+
+.interactive-hyperlink:hover{
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+    
 }
