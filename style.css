@@ -1,19 +1,52 @@
 *{
     margin:0;
     padding:0;
+    user-select:none;
+    -webkit-user-select: none;
+    -ms-user-select:none;
 }
-
-
-
 
 @font-face {
     font-family: "nasalization";
     src: url(Fonts/Nasalization\ Rg.otf);
 }
 
+@font-face {
+    font-family: 'Rostex';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rostex'), url(Fonts/RostexOblique-7OROB.woff) format('woff');
+    }
+    
+
+@font-face {
+    font-family: 'Rostex';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rostex'), url(Fonts/RostexObliqueoutline-vnPm4.woff) format('woff');
+    }
+    
+
+@font-face {
+    font-family: 'Rostex';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rostex'), url(Fonts/RostexOutline-woLow.woff) format('woff');
+    }
+    
+
+@font-face {
+    font-family: 'Rostex';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rostex'), url(Fonts/RostexRegular-m2r22.woff) format('woff');
+    }
+
 body{
     background-color:#11151c;
 }
+
+
 
 
 .heading{
@@ -22,15 +55,40 @@ body{
     font-size:150px;
     text-align:center;
     transform:translate(-60px,-10px);
+    text-shadow: 
+    0 0 5px rgba(0, 0, 0, 0.8),
+    0 0 10px rgba(0, 0, 0, 0.6),
+    0 0 20px rgba(0, 0, 0, 0.4),
+    0 0 30px rgba(0, 0, 0, 0.2),
+    0 0 40px rgba(0, 0, 0, 0.1);
+    cursor:default;
+    
 
 }
 
 #header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url(Assets/website-banner.png);
     height:155px;
-    width:100%;
+    max-width:100%;
     background-size:cover;
     background-position:center;
     position:relative;
 }
 
+
+.SSC{
+    width:140px;
+    height:140px;
+    transform:translate(10px, -200px);
+}
+
+.ACREW{
+    max-width:497px;
+    width:100%;
+    transform:translate(910px, -193.2px)
+}
+
+.artemis-logo{
+    width:140px;
+    transform:translate(10px, -200px)
+}
