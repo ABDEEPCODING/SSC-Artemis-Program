@@ -12,6 +12,17 @@
 }
 
 @font-face {
+    font-family: "Polarix";
+    src: url(Fonts/polarix-x_1.ttf);
+}
+
+@font-face {
+    font-family: "Polarix";
+    src: url(Fonts/polarix_0.ttf);
+}
+
+
+@font-face {
     font-family: 'Rostex';
     font-style: normal;
     font-weight: normal;
@@ -43,11 +54,8 @@
     }
 
 body{
-    background-color:#11151c;
+    background-color:#11151C;
 }
-
-
-
 
 .heading{
     font-family: "nasalization";
@@ -63,7 +71,6 @@ body{
     0 0 40px rgba(0, 0, 0, 0.1);
     cursor:default;
     
-
 }
 
 #header{
@@ -74,7 +81,6 @@ body{
     background-position:center;
     position:relative;
 }
-
 
 .SSC{
     width:140px;
@@ -91,4 +97,64 @@ body{
 .artemis-logo{
     width:140px;
     transform:translate(10px, -200px)
+}
+
+#navbar{
+    background:#D66853;
+    border-top:4px solid #7d4e57;
+    border-bottom:4px solid #7d4e57;
+    padding:12px 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:25px;
+    font-family:'Rostex';
+}
+
+.nav-item a,
+.dropdownbtn{
+    color:white;
+    font-size:20px;
+    font-family:'Rostex';
+    text-decoration:none;
+    background:none;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+}
+
+.sep{
+    color:#7d4e57;
+    font-size:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:0 5px;
+}
+
+.drop{
+    position:relative;
+}
+
+.drop-content{
+    position:absolute;
+    display:none;
+    background:#7d4e57;
+    min-width:175px;
+    border-radius:10px;
+    top:100%;
+    left:0;
+    text-align:center;
+    font-size:small;
+}
+
+.drop-content a{
+    padding:10px;
+    display:block;
+    color:white;
+}
+
+.drop:hover .drop-content{
+    display:block;
 }
