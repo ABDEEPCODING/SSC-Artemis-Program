@@ -61,10 +61,14 @@ body{
     background-size:cover;
     background-position:center;
     position:relative;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    text-align:center;
+    background-repeat: no-repeat;
     padding:0 20px;
+    padding-top:10px;
+    overflow:hidden;
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .heading{
@@ -88,11 +92,27 @@ body{
 }
 
 .heading:hover{
-    transform: scale(1.05);
+    transform: scale(1.06);
     text-shadow:
         0 0 10px rgba(255,255,255,0.6),
         0 0 20px rgba(255,255,255,0.4),
         0 0 30px rgba(255,255,255,0.3);
+}
+
+.heading:active{
+    transform: scale(0.97);
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.6),
+        0 0 20px rgba(255,255,255,0.4),
+        0 0 30px rgba(255,255,255,0.3);
+}
+
+.heading-wrap{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    transform:translate(-20px,-20px);
+    width:100%;
 }
 
 .SSC{
@@ -114,28 +134,23 @@ body{
 
 .SSC,
 .artemis-logo{
-    transition: transform 0.25s ease;
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                filter 0.25s ease;
+    transform-origin: bottom center;
     cursor:pointer;
     z-index:20;
 }
 
-.SSC,
-.artemis-logo{
-    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1), 
-                filter 0.25s ease;
-    transform-origin: bottom center;
-    cursor:pointer;
-}
-
 .SSC:hover,
 .artemis-logo:hover{
-    transform: scale(1.05);
+    transform: translateY(-50%) scale(1.05);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
-.SSC:hover,
-.artemis-logo:hover{
-    transform: scale(1.05);
+.SSC:active,
+.artemis-logo:active{
+    transform: translateY(-50%) scale(0.97);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
 .ACREW{
@@ -143,7 +158,8 @@ body{
     position:absolute;
     right:20px;
     top:50%;
-    transform:translateY(-50%);
+    transform: translateY(-50%);
+    will-change: transform;
 }
 
 #navbar{
@@ -244,9 +260,26 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+.infoheading2{
+    font-family:'Rostex';
+    font-size:60px;
+    z-index:10;
+    color:white;
+    transform:translate(150px, 100px);
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+}
+
 #informationsection{
     width:800px;
     transform:translate(-660px, 170px);
+    z-index:1;
+    position:relative;
+    z-index:10;
 }
 
 .information1{
@@ -254,8 +287,9 @@ body{
     color:white;
     font-size:30px;
     text-align:center;
+    position:relative;
+    z-index:1;
 }
-
 
 #infosection2{
     background-image: url(Assets/SLS_Home.jpg);
@@ -273,7 +307,7 @@ body{
     color:white;
     font-size:30px;
     text-align:center;
-    transform:translateX(210px)
+    transform:translateX(180px)
 }
 
 #infosection3{
@@ -291,7 +325,7 @@ body{
     font-size:60px;
     z-index:10;
     color:white;
-    transform:translate(1100px, 100px);
+    transform:translate(970px, 100px);
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -305,22 +339,52 @@ body{
     color:white;
     font-size:30px;
     text-align:center;
-    transform:translateX(1070px )
+    transform:translateX(930px )
 }
 
 .interactive-hyperlink{
     font-size:20px;
     width:650px;
-    height:50px;
-    transform:translate(100px,20px);
+    height:20px;
+    transform:translate(60px,20px);
     background-color:#D66853;
     font-family:'Rostex';
+    text-align:center;
+    color:white;
     border-radius:10px;
+    text-decoration:none;
+    cursor:pointer;
+    z-index:20;
+    display:inline-block;
+    padding:10px 20px;
+    position:relative;
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+    filter 0.25s ease;
     
 }
 
 .interactive-hyperlink:hover{
-    transform: scale(1.05);
+    transform: translate(60px,20px) scale(1.05);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
-    
+}
+
+.button-stack{
+    display: flex;
+    flex-direction: column;
+    gap: 5px; 
+}
+
+.interactive-hyperlink:active{
+    transform: translate(60px,20px) scale(0.97);
+}
+
+#infosection1,
+#infosection2,
+#infosection3{
+    position: relative;
+    z-index: 1;
+}
+
+#button-wrapper1{
+    transform:translateX(180px)
 }
