@@ -397,10 +397,13 @@ body{
     width:100%;
     height:350px;
     background-color:#364156;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-
 .footerheading{
+    display:block;
     font-family:"nasalization";
     color:whitesmoke;
     font-size:50px;
@@ -414,16 +417,14 @@ body{
         0 0 40px rgba(0,0,0,0.1);
     margin:0;
     flex-shrink:0;
-
-    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
-                text-shadow 0.25s ease;
-    transform-origin: bottom center;
     cursor:pointer;
-
+    transition:transform .25s cubic-bezier(.25,.1,.25,1), text-shadow .25s ease;
+    transform-origin:bottom center;
+    transform:translateX(-40px);
 }
 
 .footerheading:hover{
-    transform: scale(1.06);
+    transform:translateX(-40px) scale(1.06);
     text-shadow:
         0 0 10px rgba(255,255,255,0.6),
         0 0 20px rgba(255,255,255,0.4),
@@ -431,9 +432,5 @@ body{
 }
 
 .footerheading:active{
-    transform: scale(0.97);
-    text-shadow:
-        0 0 10px rgba(255,255,255,0.6),
-        0 0 20px rgba(255,255,255,0.4),
-        0 0 30px rgba(255,255,255,0.3);
+    transform:translateX(-40px) scale(0.97);
 }
