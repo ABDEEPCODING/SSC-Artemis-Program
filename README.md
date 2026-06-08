@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/logo.png" alt="Sancta Space Club Logo" width="220">
+  <img src="Assets/Sancta Space Club.png" alt="Sancta Space Club Logo" width="220">
 </p>
 
 # Artemis Program Website
