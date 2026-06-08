@@ -158,7 +158,7 @@ body{
     position:absolute;
     right:20px;
     top:50%;
-    transform: translateY(-50%);
+    transform: translate(-30px,-50%);
     will-change: transform;
 }
 
@@ -387,4 +387,53 @@ body{
 
 #button-wrapper1{
     transform:translateX(180px)
+}
+
+#button-wrapper2{
+    transform:translateX(960px)
+}
+
+#footer{
+    width:100%;
+    height:350px;
+    background-color:#364156;
+}
+
+
+.footerheading{
+    font-family:"nasalization";
+    color:whitesmoke;
+    font-size:50px;
+    text-decoration:none;
+    text-align:center;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+    margin:0;
+    flex-shrink:0;
+
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                text-shadow 0.25s ease;
+    transform-origin: bottom center;
+    cursor:pointer;
+
+}
+
+.footerheading:hover{
+    transform: scale(1.06);
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.6),
+        0 0 20px rgba(255,255,255,0.4),
+        0 0 30px rgba(255,255,255,0.3);
+}
+
+.footerheading:active{
+    transform: scale(0.97);
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.6),
+        0 0 20px rgba(255,255,255,0.4),
+        0 0 30px rgba(255,255,255,0.3);
 }
