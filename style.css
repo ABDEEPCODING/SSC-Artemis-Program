@@ -435,3 +435,33 @@ body{
     transform:translateX(-40px) scale(0.97);
 }
 
+
+#artemis-main{
+    background-image:url(Assets/Artemis_intro.jpg) ;
+    height:900px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items: center;
+}
+
+.artemis-main-header{
+    font-family:'Rostex';
+    color:white;
+    font-size:6rem;
+    top:20px;
+    position:absolute;
+    transform:translate(250px,50px);
+    text-align:center;
+
+}
+
+.artemis-main-paragraph{
+    font-family:"Polarix";
+    text-align:center;
+    color:white;
+    width:1200px;
+    font-size:40px;
+    transform:translate(300px,-80px)
+}
