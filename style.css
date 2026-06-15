@@ -452,7 +452,7 @@ body{
     font-size:6rem;
     top:20px;
     position:absolute;
-    transform:translate(250px,50px);
+    transform:translate(180px,50px);
     text-align:center;
 
 }
@@ -463,5 +463,12 @@ body{
     color:white;
     width:1200px;
     font-size:40px;
-    transform:translate(300px,-80px)
+    transform:translate(250px,-70px);
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+
 }
