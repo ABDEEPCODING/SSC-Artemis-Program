@@ -454,6 +454,12 @@ body{
     position:absolute;
     transform:translate(180px,50px);
     text-align:center;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
 
 }
 
@@ -463,7 +469,7 @@ body{
     color:white;
     width:1200px;
     font-size:40px;
-    transform:translate(250px,-70px);
+    transform:translate(300px,-90px);
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -471,4 +477,60 @@ body{
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
 
+}
+
+#artemis-1{
+    background-image:url(Assets/Orion_section.jpg) ;
+    height:900px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items: center;
+}
+
+.artemis-1-header{
+    font-family:'Rostex';
+    color:white;
+    font-size:6rem;
+    top:20px;
+    position:absolute;
+    transform:translate(1000px,50px);
+    text-align:center;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+
+}
+
+.artemis-1-main{
+    font-family:"Polarix";
+    text-align:center;
+    color:white;
+    width:1000px;
+    font-size:40px;
+    transform:translate(840px,-70px);
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+
+}
+
+#Artemis-1-Stats{
+    transform:translate(-700px,200px)
+}
+
+
+
+.Artemis-Stats{
+    background-color:#1f286c;
+    width:1000px;
+    height:250px;  
+    border-radius:10px;   
 }
