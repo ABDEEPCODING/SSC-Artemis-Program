@@ -515,8 +515,9 @@ body{
     color:white;
     width:850px;
     font-size:30px;
-    margin-left:30px;
+    margin-left:-200px;
     margin-top:-270px;
+    transform:translateX(-180px); 
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -545,19 +546,20 @@ body{
 
 
 #Artemis-1-Stats:hover{
-    transform:  scale(1.05);
+    transform:  scale(1.03);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
 
 .Stats-heading{
     text-align:left;
-    padding-top:20px;
-    padding-left:30px;
+    padding-top:21px;
+    padding-left:23px;
 }
 .statsheading{
     font-family:'Rostex';
     color:#D66853;
+    width:600px;
     font-size:45px;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
@@ -577,6 +579,12 @@ body{
 
 }
 
+.statsheading:active{
+    transform: scale(0.97);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+
+}
+
 .statswrapper{
     width:100%;
     display:flex;
@@ -587,4 +595,146 @@ body{
     list-style-type:none;
     padding:0;
     margin:0;
+}
+
+.Artemis-stats-table{
+    margin-left:20px;
+    list-style-type:none;
+    width:500px;
+}
+
+.list-decor{
+    list-style-type:none;
+    font-family:'Nasalization';
+    color:white;
+    font-size:25px;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                text-shadow 0.25s ease;
+    transform-origin: bottom center;
+    cursor:pointer;
+
+}
+
+.list-decor:hover{
+    transform: scale(1.02);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+
+}
+
+.list-decor:active{
+    transform:scale(0.98);
+}
+
+.Artemis-stats-table-right{
+    margin-top:-155px;
+    margin-left:900px;
+    list-style-type:none;
+    width:500px;
+
+}
+
+#artemis-2{
+    background-image:url(Assets/Artemis-II-wallpaper.jpg) ;
+    height:900px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.artemis-2-header{
+    font-family:'Rostex';
+    color:white;
+    font-size:7rem;
+    top:20px;
+    position:absolute;
+    margin-left:950px;
+    margin-top:50px;
+    text-align:center;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+
+}
+
+.artemis-2-main{
+    font-family:"Polarix";
+    text-align:center;
+    color:white;
+    width:850px;
+    font-size:30px;
+    margin-left:-200px;
+    margin-top:-270px;
+    transform:translateX(700px); 
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+    flex-shrink:0;
+
+    
+
+}
+
+#Artemis-2-Stats{
+    background-color:#1f286c;
+    width:1350px;
+    height:250px;  
+    border-radius:20px;  
+    margin-left:-1130px;
+    margin-top:600px;
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                text-shadow 0.25s ease;
+    transform-origin: bottom center;
+    cursor:pointer;
+
+}
+
+#Artemis-2-Stats:hover{
+    transform:  scale(1.03);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+}
+
+#Artemis-2-Crew-div{
+    height:1000px;
+    background-color:#11151C;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.artemis-2-crew-header{
+    font-family:'Rostex';
+    color:white;
+    font-size:5.5rem;
+    top:20px;
+    width:100%;
+    max-width:3000px;
+    position:absolute;
+    margin-left:-30px;
+    margin-top:10px;
+    text-align:center;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+
 }
