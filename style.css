@@ -520,10 +520,16 @@ body{
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
 
+    
+
 }
 
 #Artemis-1-Stats{
-    transform:translate(-700px,200px)
+    transform:translate(-850px,300px);
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                text-shadow 0.25s ease;
+    transform-origin: bottom center;
+    cursor:pointer;
 }
 
 
@@ -533,4 +539,37 @@ body{
     width:1000px;
     height:250px;  
     border-radius:10px;   
+}
+
+#Artemis-1-Stats:hover{
+    transform: translate(-850px, 300px) scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+}
+
+
+.Stats-heading{
+    text-align:left;
+    padding-top:20px;
+    padding-left:30px;
+}
+.statsheading{
+    font-family:'Rostex';
+    color:#D66853;
+    font-size:45px;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                text-shadow 0.25s ease;
+    transform-origin: bottom center;
+    cursor:pointer;
+}
+
+.statsheading:hover{
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+
 }
