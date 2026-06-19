@@ -58,6 +58,7 @@ body{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url(Assets/website-banner.png);
     height:155px;
     width:100%;
+    box-sizing:border-box;
     background-size:cover;
     background-position:center;
     position:relative;
@@ -74,7 +75,7 @@ body{
 .heading{
     font-family:"nasalization";
     color:whitesmoke;
-    font-size:150px;
+    font-size:130px;
     text-decoration:none;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
@@ -113,6 +114,8 @@ body{
     align-items:center;
     transform:translate(-20px,-20px);
     width:100%;
+    padding:0 480px 0 340px;
+    box-sizing:border-box;
 }
 
 .SSC{
@@ -154,11 +157,11 @@ body{
 }
 
 .ACREW{
-    width:458px;
+    width:400px;
     position:absolute;
-    right:20px;
+    right:0px;
     top:50%;
-    transform: translate(-30px,-50%);
+    transform: translateY(-50%);
     will-change: transform;
 }
 
@@ -186,6 +189,12 @@ body{
     cursor:pointer;
     display:flex;
     align-items:center;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
 }
 
 #navbar .nav-item a,
@@ -229,6 +238,12 @@ body{
     padding:10px;
     display:block;
     color:white;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
 }
 
 .drop:hover .drop-content{
@@ -242,8 +257,10 @@ body{
     background-position:center;
     position:relative;
     display:flex;
-    align-items: left;
-
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    padding:120px 8% 0 8%;
 }
 
 .infoheading{
@@ -251,7 +268,7 @@ body{
     font-size:60px;
     z-index:10;
     color:white;
-    transform:translate(94px, 100px);
+    margin-bottom:30px;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -265,7 +282,7 @@ body{
     font-size:60px;
     z-index:10;
     color:white;
-    transform:translate(150px, 100px);
+    margin-bottom:30px;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -274,10 +291,8 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
-#informationsection{
-    width:800px;
-    transform:translate(-660px, 170px);
-    z-index:1;
+.informationsection{
+    max-width:800px;
     position:relative;
     z-index:10;
 }
@@ -289,6 +304,12 @@ body{
     text-align:center;
     position:relative;
     z-index:1;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
 }
 
 #infosection2{
@@ -298,8 +319,10 @@ body{
     background-position:center;
     position:relative;
     display:flex;
-    align-items:left;   
-    
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    padding:120px 8% 0 8%;
 }
 
 .information2{
@@ -307,7 +330,12 @@ body{
     color:white;
     font-size:30px;
     text-align:center;
-    transform:translateX(180px)
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
 }
 
 #infosection3{
@@ -317,7 +345,10 @@ body{
     background-position:center;
     position:relative;
     display:flex;
-    align-items:left;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:flex-end;
+    padding:120px 8% 0 8%;
 }
 
 .infoheading-III{
@@ -325,28 +356,30 @@ body{
     font-size:60px;
     z-index:10;
     color:white;
-    transform:translate(970px, 100px);
+    margin-bottom:30px;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
         0 0 20px rgba(0,0,0,0.4),
         0 0 30px rgba(0,0,0,0.2),
-        0 0 40px rgba(0,0,0,0.1);    
+        0 0 40px rgba(0,0,0,0.1);
 }
 
 .information3{
     font-family:"Polarix";
     color:white;
     font-size:30px;
-    text-align:center;
-    transform:translateX(930px )
+    text-align:right;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
 }
 
 .interactive-hyperlink{
     font-size:20px;
-    width:650px;
-    height:20px;
-    transform:translate(60px,20px);
     background-color:#D66853;
     font-family:'Rostex';
     text-align:center;
@@ -358,24 +391,30 @@ body{
     display:inline-block;
     padding:10px 20px;
     position:relative;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
     transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
     filter 0.25s ease;
-    
 }
 
 .interactive-hyperlink:hover{
-    transform: translate(60px,20px) scale(1.05);
+    transform: scale(1.05);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
 .button-stack{
     display: flex;
     flex-direction: column;
-    gap: 5px; 
+    gap: 5px;
+    margin-top:20px;
 }
 
 .interactive-hyperlink:active{
-    transform: translate(60px,20px) scale(0.97);
+    transform: scale(0.97);
 }
 
 #infosection1,
@@ -386,11 +425,12 @@ body{
 }
 
 #button-wrapper1{
-    transform:translateX(180px)
+    margin-top:20px;
 }
 
 #button-wrapper2{
-    transform:translateX(960px)
+    margin-top:20px;
+    text-align:center;
 }
 
 #footer{
