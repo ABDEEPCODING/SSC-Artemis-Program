@@ -778,3 +778,20 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 
 }
+
+.Artemis-II.Crew-Images-Grid{
+    display:grid;
+    grid-auto-flow:row;
+    grid-template-columns: repeat(autofit, minmax(180px, 1fr));
+    gap:10px;
+}
+
+.Artemis-II-Crew-Images-Grid img{
+    width:100%;
+    max-width:300wpx;
+    margin: 0 auto;
+    display:block;
+    border-radius:10px;
+    cursor:pointer;
+    transition:transform 0.2s ease;
+}
