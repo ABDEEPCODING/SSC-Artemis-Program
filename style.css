@@ -773,7 +773,7 @@ body{
     display:grid;
     grid-auto-flow: row;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap:10px;
+    gap:2px;
     width:100%;
 }
 
@@ -786,6 +786,106 @@ body{
     cursor:pointer;
     transition:transform 0.2s ease;
     object-fit:cover;
+    height:300px;
+    margin-top:-40px;
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+        text-shadow 0.25s ease;
     
+}
+
+.astronautcard{
+    height:450px;
+    width:100%;
+    max-width:450px;
+    justify-content:right;
+}
+
+.cooleffect{
+    display:block;
+    text-decoration:none;
+    cursor:pointer;
+}
+
+.Astronaut_Name{
+    font-family:'Rostex';
+    font-size:30px;
+    color:white;
+    margin-top:15px;
+    margin-left:30px;
+    transition: transform 0.25s cubic-bezier(0.25,0.1,0.25,1), filter 0.25s ease;
+}
+
+.Astronaut_Title{
+    font-family:'Rostex';
+    font-size:30px;
+    color:white;
+    margin-top:5px;
+    margin-left:135px;
+    width:120px;
+    transition: transform 0.25s cubic-bezier(0.25,0.1,0.25,1), filter 0.25s ease;
+}
+
+.separatorjr{
+    width:270px;
+    margin-left:65px;
+    height:5px;
+    background-color:#D66853;
+    border-color:#D66853;
+    transition: transform 0.25s cubic-bezier(0.25,0.1,0.25,1), filter 0.25s ease;
+}
+
+
+.astronautcard:hover .Astronaut_Name{
+    filter: drop-shadow(0 0 8px rgba(0,0,128,1));
+    transform:scale(1.1);
+}
+
+.astronautcard:hover .Astronaut_Title{
+    filter: drop-shadow(0 0 8px rgba(0,0,128,1));
+    transform:scale(1.1);
+}
+
+.astronautcard:hover .separatorjr{
+    filter: drop-shadow(0 0 8px rgba(214,104,83,1));
+    transform:scaleX(1.1);
+}
+
+
+
+.astronautinfo{
+    text-align:center;
+    font-family:"Polarix";
+    font-size:20px;
+    width:350px;
+    color:white;
+    margin-left:30px;
+    cursor:default;
+    margin-top:10px;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+        text-shadow 0.25s ease;
+}
+
+.astronautinfo:hover{
+    transform:scale(1.1)
+    
+}
+
+
+
+.Artemis-II-Crew-Images-Grid img:hover{
+    transform:scale(1.03);
+    filter: drop-shadow(0 0 8px rgba(214,104,83,1));
+}
+
+.Artemis-II-Crew-Images-Grid img:active{
+    filter: drop-shadow(0 0 8px rgba(214,104,83,1));
+    transform:scale(0.98);
+
 }
 
