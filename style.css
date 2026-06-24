@@ -52,7 +52,7 @@ body{
 }
 
 #header{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url(Assets/website-banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url(Assets/website-banner.webp);
     height:155px;
     width:100%;
     box-sizing:border-box;
@@ -248,7 +248,7 @@ body{
 }
 
 #infosection1{
-    background-image:url(Assets/SLS-Launching.jpg);
+    background-image:url(Assets/SLS-Launching.webp);
     height:900px;
     background-size:cover;
     background-position:center;
@@ -310,7 +310,7 @@ body{
 }
 
 #infosection2{
-    background-image: url(Assets/SLS_Home.jpg);
+    background-image: url(Assets/SLS_Home.webp);
     height:900px;
     background-size:cover;
     background-position:center;
@@ -336,7 +336,7 @@ body{
 }
 
 #infosection3{
-    background-image: url(Assets/Orion.jpg);
+    background-image: url(Assets/Orion.webp);
     height:900px;
     background-size:cover;
     background-position:center;
@@ -474,7 +474,7 @@ body{
 
 
 #artemis-main{
-    background-image:url(Assets/Artemis_intro.jpg) ;
+    background-image:url(Assets/Artemis_intro.webp) ;
     height:900px;
     background-size:cover;
     background-position:center;
@@ -518,7 +518,7 @@ body{
 }
 
 #artemis-1{
-    background-image:url(Assets/Orion_section.jpg) ;
+    background-image:url(Assets/Orion_section.webp) ;
     height:900px;
     background-size:cover;
     background-position:center;
@@ -672,7 +672,7 @@ body{
 }
 
 #artemis-2{
-    background-image:url(Assets/Artemis-II-wallpaper.jpg) ;
+    background-image:url(Assets/Artemis-II-wallpaper.webp) ;
     height:900px;
     background-size:cover;
     background-position:center;
@@ -911,7 +911,7 @@ body{
 
 
 #artemis-3{
-    background-image:url(Assets/starship-hls.png) ;
+    background-image:url(Assets/starship-hls.webp) ;
     height:900px;
     background-size:cover;
     background-position:center;
@@ -968,4 +968,60 @@ body{
         0 0 20px rgba(0,0,0,0.4),
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
+}
+
+#artemis-iv-main{
+    background-image:url(Assets/Artemis_whatever.webp) ;
+    height:900px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:flex-start;
+    padding-top:80px;
+    gap:10px;
+}
+
+.artemis-iv-main-header{
+    font-family:'Rostex';
+    color:white;
+    font-size:7rem;
+    top:20px;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+
+}
+
+.artemis-iv-main-paragraph{
+    font-family:"Polarix";
+    text-align:center;
+    color:white;
+    width:850px;
+    font-size:30px;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+    flex-shrink:0;
+}
+
+#SLS-Introduction{
+    background-image:url(Assets/SLS-interactive-main.webp) ;
+    height:900px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:flex-start;
+    padding-top:80px;
 }
