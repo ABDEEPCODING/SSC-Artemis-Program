@@ -1,6 +1,18 @@
-*{
-    margin:0;
-    padding:0;
+*{margin:0;padding:0;}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body{
+    animation: fadeIn 1.2s ease forwards;
 }
 
 @font-face {
@@ -49,6 +61,23 @@
 body{
     background-color:#11151C;
     overflow-x: hidden;
+}
+
+.fly-left{
+    opacity:0;
+    transform: translateX(-30px);
+    transition: opacity 0.8s ease, transform 1.6s ease;
+}
+
+.fly-right{
+    opacity:0;
+    transform: translateX(30px);
+    transition: opacity 0.8s ease, transform 1.6s ease;
+}
+
+.fly-in-visible{
+    opacity:1;
+    transform: translateX(0);
 }
 
 #header{
@@ -326,6 +355,7 @@ body{
     font-family:"Polarix";
     color:white;
     font-size:30px;
+    margin-left:-100px;
     text-align:center;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
@@ -433,10 +463,25 @@ body{
 #footer{
     width:100%;
     height:350px;
-    background-color:#364156;
     display:flex;
     justify-content:center;
     align-items:center;
+    border-top: 2px solid #D66853;
+    box-shadow: 0 -4px 20px rgba(214,104,83,0.4);
+    background: radial-gradient(circle at 20% 50%, rgba(214,104,83,0.08), transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05), transparent 40%),
+                #11151C;
+}
+
+.github-icon{
+    width:80px;
+    height:80px;
+    filter: drop-shadow(0 0 4px rgba(255,255,255,0.4));
+    transition: transform 0.25s ease;
+}
+
+.footerheading:hover .github-icon{
+    transform: rotate(360deg);
 }
 
 .footerheading{
@@ -445,7 +490,12 @@ body{
     color:whitesmoke;
     font-size:50px;
     text-decoration:none;
+    display:flex;
+    align-items:center;
+    gap:10px;
     text-align:center;
+    position:relative;
+    text-decoration:none;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -457,11 +507,27 @@ body{
     cursor:pointer;
     transition:transform .25s cubic-bezier(.25,.1,.25,1), text-shadow .25s ease;
     transform-origin:bottom center;
-    transform:translateX(-40px);
 }
 
+
+.footerheading::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:-4px;
+    width:0%;
+    height:2px;
+    background-color:#D66853;
+    transition: width 0.3s ease;
+}
+
+.footerheading:hover::after{
+    width:100%;
+}
+
+
 .footerheading:hover{
-    transform:translateX(-40px) scale(1.06);
+    transform:scale(1.06);
     text-shadow:
         0 0 10px rgba(255,255,255,0.6),
         0 0 20px rgba(255,255,255,0.4),
@@ -469,8 +535,9 @@ body{
 }
 
 .footerheading:active{
-    transform:translateX(-40px) scale(0.97);
+    transform:scale(0.97);
 }
+
 
 
 #artemis-main{
@@ -480,17 +547,18 @@ body{
     background-position:center;
     position:relative;
     display:flex;
+    flex-direction:column;
     align-items: center;
+    justify-content:flex-start;
+    padding-top:80px;
 }
 
 .artemis-main-header{
     font-family:'Rostex';
     color:white;
-    font-size:6rem;
-    top:20px;
-    position:absolute;
-    transform:translate(180px,50px);
+    font-size:7rem;
     text-align:center;
+    margin:0 0 30px 0;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -499,22 +567,23 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 
 }
+
+
 
 .artemis-main-paragraph{
     font-family:"Polarix";
     text-align:center;
     color:white;
     width:1200px;
-    font-size:40px;
-    margin-left:230px;
-    margin-top:-160px;
+    font-size:50px;
+    margin-bottom:30px;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
         0 0 20px rgba(0,0,0,0.4),
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
-
+    flex-shrink:0;
 }
 
 #artemis-1{
@@ -533,7 +602,7 @@ body{
 .artemis-1-header{
     font-family:'Rostex';
     color:white;
-    font-size:7rem;
+    font-size:10rem;
     text-align:center;
     margin:0 0 30px 0;
     text-shadow:
@@ -549,8 +618,8 @@ body{
     font-family:"Polarix";
     text-align:center;
     color:white;
-    width:850px;
-    font-size:30px;
+    width:1400px;
+    font-size:2.8125rem;
     margin-bottom:30px;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
@@ -592,7 +661,7 @@ body{
     font-family:'Rostex';
     color:#D66853;
     width:600px;
-    font-size:45px;
+    font-size:2.8125rem;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -665,7 +734,7 @@ body{
 
 .Artemis-stats-table-right{
     margin-top:-155px;
-    margin-left:900px;
+    margin-left:840px;
     list-style-type:none;
     width:500px;
 
@@ -688,7 +757,7 @@ body{
 .artemis-2-header{
     font-family:'Rostex';
     color:white;
-    font-size:7rem;
+    font-size:10rem;
     top:20px;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
@@ -703,8 +772,8 @@ body{
     font-family:"Polarix";
     text-align:center;
     color:white;
-    width:850px;
-    font-size:30px;
+    width:1300px;
+    font-size:2.8125rem;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -841,7 +910,7 @@ body{
 
 .separatorjr{
     width:270px;
-    margin-left:65px;
+    margin-left:80px;
     height:5px;
     background-color:#D66853;
     border-color:#D66853;
@@ -877,7 +946,7 @@ body{
     font-size:20px;
     width:350px;
     color:white;
-    margin-left:30px;
+    margin-left:50px;
     cursor:default;
     margin-top:10px;
     text-shadow:
@@ -1002,8 +1071,8 @@ body{
     font-family:"Polarix";
     text-align:center;
     color:white;
-    width:850px;
-    font-size:30px;
+    width:1300px;
+    font-size:2.8125rem;
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -1024,4 +1093,36 @@ body{
     align-items: center;
     justify-content:flex-start;
     padding-top:80px;
+}
+
+.sls-intro-header{
+    font-family:'Rostex';
+    color:white;
+    font-size:5rem;
+    text-align:center;
+    margin:0 0 30px 0;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+
+}
+
+.sls-intro-p{
+    font-family:"Polarix";
+    text-align:center;
+    color:white;
+    width:1400px;
+    font-size:2.8125rem;
+    margin-bottom:30px;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+    flex-shrink:0;
+
 }
