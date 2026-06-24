@@ -1128,7 +1128,9 @@ body{
 }
 
 .ralphgamboa{
-    background-image:url(Assets/Reid_wiseman.webp) ;
+    background: radial-gradient(circle at 20% 50%, rgba(213,85,83,0.08), transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05), transparent 40%),
+                #11151C;
     height:1000px;
     background-size:cover;
     background-position:center;
@@ -1140,3 +1142,59 @@ body{
     padding-top:80px;
     gap:10px;
 }   
+
+.SSC-Header{
+    font-family:'Rostex';
+    color:white;
+    font-size:4rem;
+    top:20px;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+}
+
+.SSC-P{
+    font-family:"Polarix";
+    text-align:center;
+    color:white;
+    width:1300px;
+    margin-right:-90px;
+    font-size:2.8125rem;
+    text-shadow:
+        0 0 5px rgba(0,0,0,0.8),
+        0 0 10px rgba(0,0,0,0.6),
+        0 0 20px rgba(0,0,0,0.4),
+        0 0 30px rgba(0,0,0,0.2),
+        0 0 40px rgba(0,0,0,0.1);
+    flex-shrink:0;
+}
+
+.SSC-icon{
+    width:300px;
+    height:300px;
+    position:absolute;
+    left:20px;
+    top:50%;
+    transform:translateY(-390px);
+}
+
+.SSC-icon{
+    transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
+                filter 0.25s ease;
+    transform-origin: bottom center;
+    cursor:pointer;
+    z-index:20;
+}
+
+.SSC-icon:hover{
+    transform: translateY(-390px) scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+}
+
+.SSC-icon:active{
+    transform: translateY(-390px) scale(0.8);
+    filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
+}
