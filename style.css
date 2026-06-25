@@ -1,62 +1,74 @@
-*{margin:0;padding:0;}
+/* Reset all default browser spacing */
+*{
+    margin:0;
+    padding:0;
+}
 
+/* Fade‑in animation for page load */
 @keyframes fadeIn {
     from {
-        opacity: 0;
-        transform: translateY(-100px);
+        opacity: 0;                     /* Start invisible */
+        transform: translateY(-100px);  /* Slide down from above */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1;                     /* Fully visible */
+        transform: translateY(0);       /* Back to normal position */
     }
 }
 
+/* Apply fade‑in animation to the whole page */
 body{
     animation: fadeIn 1.2s ease forwards;
 }
 
+/* ===== Custom Font Imports ===== */
+
+/* Main futuristic heading font */
 @font-face {
     font-family: "nasalization";
     src: url(Fonts/Nasalization\ Rg.otf);
 }
 
+/* Polarix font — used for body text */
 @font-face {
     font-family: "Polarix";
     src: url(Fonts/polarix-x_1.ttf);
 }
 
+/* Backup/alternate Polarix weight */
 @font-face {
     font-family: "Polarix";
     src: url(Fonts/polarix_0.ttf);
+}
+
+/* Rostex — multiple variants for stylized headings */
+@font-face {
+    font-family: 'Rostex';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Rostex'), url(Fonts/RostexOblique-7OROB.woff) format('woff');
 }
 
 @font-face {
     font-family: 'Rostex';
     font-style: normal;
     font-weight: normal;
-    src: local('Rostex'), url(Fonts/RostexOblique-7OROB.woff) format('woff');
-    }
-    
-@font-face {
-    font-family: 'Rostex';
-    font-style: normal;
-    font-weight: normal;
     src: local('Rostex'), url(Fonts/RostexObliqueoutline-vnPm4.woff) format('woff');
-    }
-    
+}
+
 @font-face {
     font-family: 'Rostex';
     font-style: normal;
     font-weight: normal;
     src: local('Rostex'), url(Fonts/RostexOutline-woLow.woff) format('woff');
-    }
-    
+}
+
 @font-face {
     font-family: 'Rostex';
     font-style: normal;
     font-weight: normal;
     src: local('Rostex'), url(Fonts/RostexRegular-m2r22.woff) format('woff');
-    }
+}
 
 body{
     background-color:#11151C;
@@ -68,6 +80,8 @@ body{
     transform: translateX(-30px);
     transition: opacity 0.8s ease, transform 1.6s ease;
 }
+
+
 
 .fly-right{
     opacity:0;
@@ -365,6 +379,7 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Information Section 3 Styles */
 #infosection3{
     background-image: url(Assets/Orion.webp);
     height:900px;
@@ -405,6 +420,7 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Interactive Link and Button Styles */
 .interactive-hyperlink{
     font-size:20px;
     background-color:#D66853;
@@ -444,6 +460,7 @@ body{
     transform: scale(0.97);
 }
 
+/* Common Section Positioning */
 #infosection1,
 #infosection2,
 #infosection3{
@@ -451,6 +468,7 @@ body{
     z-index: 1;
 }
 
+/* Button Wrapper Layouts */
 #button-wrapper1{
     margin-top:20px;
 }
@@ -460,6 +478,7 @@ body{
     text-align:center;
 }
 
+/* Footer Section Styling */
 #footer{
     width:100%;
     height:350px;
@@ -473,6 +492,7 @@ body{
                 #11151C;
 }
 
+/* Footer GitHub Icon Animation */
 .github-icon{
     width:80px;
     height:80px;
@@ -484,6 +504,7 @@ body{
     transform: rotate(360deg);
 }
 
+/* Footer Heading and Hover Effects */
 .footerheading{
     display:block;
     font-family:"nasalization";
@@ -536,6 +557,7 @@ body{
     transform:scale(0.97);
 }
 
+/* Artemis Introduction Section */
 #artemis-main{
     background-image:url(Assets/Artemis_intro.webp) ;
     height:900px;
@@ -580,6 +602,7 @@ body{
     flex-shrink:0;
 }
 
+/* Artemis Section 1 Styles */
 #artemis-1{
     background-image:url(Assets/Orion_section.webp) ;
     height:900px;
@@ -622,39 +645,41 @@ body{
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
     flex-shrink:0;
-
-    
-
 }
 
+/* Artemis 1 Statistics Card Styles */
 #Artemis-1-Stats{
     background-color:#1f286c;
     width:1350px;
-    height:250px;  
-    border-radius:20px;  
+    height:250px;
+    border-radius:20px;
+    /* Smooth transitions for scaling and text shadow changes */
     transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
                 text-shadow 0.25s ease;
     transform-origin: bottom center;
     cursor:pointer;
-
 }
 
+/* Scale and glow effect when hovering over the Artemis 1 stats container */
 #Artemis-1-Stats:hover{
     transform:  scale(1.03);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
+/* Alignment and spacing for the statistics heading container */
 .Stats-heading{
     text-align:left;
     padding-top:21px;
     padding-left:23px;
 }
 
+/* Typography, color, and multi-layered shadow effects for the main stats heading */
 .statsheading{
     font-family:'Rostex';
     color:#D66853;
     width:600px;
     font-size:2.8125rem;
+    /* Depth effect using multiple shadow layers */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -667,36 +692,40 @@ body{
     cursor:pointer;
 }
 
+/* Scale and glow effect on hover for the stats heading */
 .statsheading:hover{
     transform: scale(1.03);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
-
 }
 
+/* Slight shrink effect when clicking the stats heading */
 .statsheading:active{
     transform: scale(0.97);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
-
 }
 
+/* Centered layout for the statistics wrapper */
 .statswrapper{
     width:100%;
     display:flex;
     justify-content: center;
 }
 
+/* Reset list styles for the statistics items */
 .statistics{
     list-style-type:none;
     padding:0;
     margin:0;
 }
 
+/* Specific positioning and width for the Artemis stats data table */
 .Artemis-stats-table{
     margin-left:20px;
     list-style-type:none;
     width:500px;
 }
 
+/* Visual styling for list items including font and complex shadows */
 .list-decor{
     list-style-type:none;
     font-family:'Nasalization';
@@ -712,27 +741,28 @@ body{
                 text-shadow 0.25s ease;
     transform-origin: bottom center;
     cursor:pointer;
-
 }
 
+/* Scale and glow interaction for decorative list items */
 .list-decor:hover{
     transform: scale(1.02);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
-
 }
 
+/* Click feedback for decorative list items */
 .list-decor:active{
     transform:scale(0.98);
 }
 
+/* Manual positioning for the right-hand portion of the stats table */
 .Artemis-stats-table-right{
     margin-top:-155px;
     margin-left:840px;
     list-style-type:none;
     width:500px;
-
 }
 
+/* Artemis 2 section hero layout with background image */
 #artemis-2{
     background-image:url(Assets/Artemis-II-wallpaper.webp) ;
     height:900px;
@@ -747,6 +777,7 @@ body{
     gap:10px;
 }
 
+/* Large stylized header for the Artemis 2 section */
 .artemis-2-header{
     font-family:'Rostex';
     color:white;
@@ -758,9 +789,9 @@ body{
         0 0 20px rgba(0,0,0,0.4),
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
-
 }
 
+/* Styling for the main descriptive text in Artemis 2 section */
 .artemis-2-main{
     font-family:"Polarix";
     text-align:center;
@@ -774,28 +805,27 @@ body{
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
     flex-shrink:0;
-
-    
-
 }
 
+/* Background and interactive transitions for Artemis 2 statistics card */
 #Artemis-2-Stats{
     background-color:#1f286c;
     width:1350px;
-    height:250px;  
-    border-radius:20px;  
+    height:250px;
+    border-radius:20px;
     transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
                 text-shadow 0.25s ease;
     transform-origin: bottom center;
     cursor:pointer;
-
 }
 
+/* Hover state for Artemis 2 stats card */
 #Artemis-2-Stats:hover{
     transform:  scale(1.03);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
+/* Full-width container for the Artemis 2 crew showcase */
 #Artemis-2-Crew-div{
     height:1000px;
     width:100%;
@@ -808,6 +838,7 @@ body{
     justify-content:center;
 }
 
+/* Floating header for the crew section with large typography */
 .artemis-2-crew-header{
     font-family:'Rostex';
     color:white;
@@ -825,13 +856,14 @@ body{
         0 0 20px rgba(0,0,0,0.4),
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
-
 }
 
+/* Ensuring the crew division maintains full width */
 #Artemis-2-Crew-div{
     width:100%;
 }
 
+/* Responsive grid layout for the crew member images */
 .Artemis-II-Crew-Images-Grid{
     display:grid;
     grid-auto-flow: row;
@@ -840,6 +872,7 @@ body{
     width:100%;
 }
 
+/* Image styling within the crew grid including hover animations */
 .Artemis-II-Crew-Images-Grid img{
     width:100%;
     max-width:400px;
@@ -853,9 +886,9 @@ body{
     margin-top:-40px;
     transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
         text-shadow 0.25s ease;
-    
 }
 
+/* Layout for individual astronaut cards containing name, title, and bio */
 .astronautcard{
     height:450px;
     width:100%;
@@ -864,6 +897,7 @@ body{
     text-align:center;
 }
 
+/* Interactive wrapper for astronaut card elements */
 .cooleffect{
     display:grid;
     text-decoration:none;
@@ -871,6 +905,7 @@ body{
     align-items:center;
 }
 
+/* Typography and shadows for the astronaut name text */
 .Astronaut_Name{
     font-family:'Rostex';
     font-size:30px;
@@ -885,6 +920,7 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Typography and shadows for the astronaut title text */
 .Astronaut_Title{
     font-family:'Rostex';
     font-size:30px;
@@ -899,6 +935,23 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+.ralphgamboa{
+    background: radial-gradient(circle at 20% 50%, rgba(213,85,83,0.08), transparent 50%),
+                radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05), transparent 40%),
+                #11151C;
+    height:1000px;
+    background-size:cover;
+    background-position:center;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content:flex-start;
+    padding-top:80px;
+    gap:10px;
+}   
+
+/* Horizontal line separator with color and expansion transition */
 .separatorjr{
     width:270px;
     margin-left:80px;
@@ -908,26 +961,31 @@ body{
     transition: transform 0.25s cubic-bezier(0.25,0.1,0.25,1), filter 0.25s ease;
 }
 
+/* Parent-triggered hover effects: scale and glow for astronaut name */
 .astronautcard:hover .Astronaut_Name{
     filter: drop-shadow(0 0 8px rgba(214,104,83,1));
     transform:scale(1.1);
 }
 
+/* Parent-triggered hover effects: scale and glow for astronaut title */
 .astronautcard:hover .Astronaut_Title{
     filter: drop-shadow(0 0 8px rgba(214,104,83,1));
     transform:scale(1.1);
 }
 
+/* Specific hover effect for Wiseman's title variant */
 .astronautcard:hover .Astronaut_Title_wiseman{
     filter: drop-shadow(0 0 8px rgba(214,104,83,1));
     transform:scale(1.1);
 }
 
+/* Horizontal expansion effect for the separator line on hover */
 .astronautcard:hover .separatorjr{
     filter: drop-shadow(0 0 8px rgba(214,104,83,1));
     transform:scaleX(1.3);
 }
 
+/* Detailed biographical text styling for astronauts */
 .astronautinfo{
     text-align:center;
     font-family:"Polarix";
@@ -947,11 +1005,13 @@ body{
         text-shadow 0.25s ease;
 }
 
+/* Astronaut Info Hover Scale */
 .astronautinfo:hover{
     transform:scale(1.1)
-    
+
 }
 
+/* Image Grid Hover and Active States */
 .Artemis-II-Crew-Images-Grid img:hover{
     transform:scale(1.03);
     filter: drop-shadow(0 0 8px rgba(214,104,83,1));
@@ -963,6 +1023,7 @@ body{
 
 }
 
+/* Artemis 3 Section Background and Layout */
 #artemis-3{
     background-image:url(Assets/starship-hls.webp) ;
     height:900px;
@@ -977,6 +1038,7 @@ body{
     gap:10px;
 }
 
+/* Artemis 3 Header Styling */
 .artemis-3-main-header{
     font-family:"Rostex";
     font-size:100px;
@@ -989,6 +1051,7 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Artemis 3 Paragraph Styling */
 .artemis-3-main-paragraph{
     font-family:"Polarix";
     font-size:30px;
@@ -1002,14 +1065,14 @@ body{
         0 0 20px rgba(0,0,0,0.4),
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
-    
-}
 
+}
 .crew-wrapper{
     width:100%;
     margin-top:50px;
 }
 
+/* Main header for the Artemis 3 crew section */
 .artemis-3-crew-main-header{
     font-family:"Rostex";
     font-size:60px;
@@ -1023,6 +1086,7 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Main container for the Artemis IV section */
 #artemis-iv-main{
     background-image:url(Assets/Artemis_whatever.webp) ;
     height:900px;
@@ -1037,6 +1101,7 @@ body{
     gap:10px;
 }
 
+/* Header text for Artemis IV section */
 .artemis-iv-main-header{
     font-family:'Rostex';
     color:white;
@@ -1051,6 +1116,7 @@ body{
 
 }
 
+/* Main paragraph for Artemis IV section */
 .artemis-iv-main-paragraph{
     font-family:"Polarix";
     text-align:center;
@@ -1066,6 +1132,7 @@ body{
     flex-shrink:0;
 }
 
+/* Introduction section for the SLS rocket */
 #SLS-Introduction{
     background-image:url(Assets/SLS-interactive-main.webp) ;
     height:900px;
@@ -1079,6 +1146,7 @@ body{
     padding-top:80px;
 }
 
+/* Header for the SLS intro section */
 .sls-intro-header{
     font-family:'Rostex';
     color:white;
@@ -1094,6 +1162,7 @@ body{
 
 }
 
+/* Paragraph text for the SLS intro section */
 .sls-intro-p{
     font-family:"Polarix";
     text-align:center;
@@ -1111,22 +1180,8 @@ body{
 
 }
 
-.ralphgamboa{
-    background: radial-gradient(circle at 20% 50%, rgba(213,85,83,0.08), transparent 50%),
-                radial-gradient(circle at 80% 30%, rgba(255,255,255,0.05), transparent 40%),
-                #11151C;
-    height:1000px;
-    background-size:cover;
-    background-position:center;
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    align-items: center;
-    justify-content:flex-start;
-    padding-top:80px;
-    gap:10px;
-}   
 
+/* Header for the SSC section */
 .SSC-Header{
     font-family:'Rostex';
     color:white;
@@ -1140,6 +1195,7 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Paragraph text for the SSC section */
 .SSC-P{
     font-family:"Polarix";
     text-align:center;
@@ -1156,6 +1212,7 @@ body{
     flex-shrink:0;
 }
 
+/* Interactive icon for the SSC section */
 .SSC-icon{
     width:200px;
     height:200px;
@@ -1165,6 +1222,7 @@ body{
     transform:translateY(-390px);
 }
 
+/* Animations and states for the SSC icon */
 .SSC-icon{
     transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
                 filter 0.25s ease;
@@ -1173,25 +1231,30 @@ body{
     z-index:20;
 }
 
+/* Hover state for the SSC icon */
 .SSC-icon:hover{
     transform: translateY(-390px) scale(1.05);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
+/* Active/click state for the SSC icon */
 .SSC-icon:active{
     transform: translateY(-390px) scale(0.8);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
+/* Secondary styling for the SLS Introduction section */
 #SLS-Introduction{
     background-color:#0d1117;
     min-height:500px;
+    max-height:200px;
     display:flex;
     flex-direction:column;
-    align-items:flex-start;
+    align-items:center;
     padding:120px 8% 100px 8%;
 }
 
+/* Secondary header styling for SLS intro */
 .sls-intro-header{
     font-family:'Rostex';
     color:white;
@@ -1205,6 +1268,7 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Secondary paragraph styling for SLS intro */
 .sls-intro-p{
     font-family:"Polarix";
     color:white;
@@ -1218,7 +1282,7 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
-/* ===== SLS page: interactive rocket diagram ===== */
+/* Main container for the interactive SLS rocket display */
 #SLS-Interactive{
     background-color:#11151C;
     display:flex;
@@ -1227,6 +1291,7 @@ body{
     padding:80px 8% 100px 8%;
 }
 
+/* Header for the interactive SLS area */
 .sls-interactive-header{
     font-family:'Rostex';
     color:white;
@@ -1239,55 +1304,81 @@ body{
         0 0 20px rgba(0,0,0,0.4);
 }
 
-/* The diagram stage. aspect-ratio MUST match your exported canvas
-   (placeholder is 2000x800 -- update this if your canvas size differs) */
+/* The viewport area for the interactive rocket */
 #Interactive_Area{
     position:relative;
     width:100%;
     max-width:1400px;
-    aspect-ratio: 2000 / 800;
+    aspect-ratio: 1934 / 286;
 }
 
+/* Shared properties for rocket components */
 .rocket-layer{
     position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
     object-fit:contain;
-    pointer-events:none;
-    transition: transform 0.5s cubic-bezier(0.25,0.1,0.25,1), opacity 0.5s ease;
-}
-
-.hotspot{
-    position:absolute;
+    transition: transform 0.5s cubic-bezier(0.25,0.1,0.25,1), opacity 0.5s ease, filter 0.5s ease;
     cursor:pointer;
-    /* uncomment while tuning hotspot positions:
-    background-color: rgba(214,104,83,0.35);
-    border: 1px dashed white;
-    */
 }
 
-/* Each part decouples in its own direction when its hotspot is active */
-.rocket-core.active{
-    transform: translateY(-10px) scale(1.01);
+/* Position and size for the rocket core stage */
+.rocket-core{
+    left:0%;
+    top:16.26%;
+    width:76.94%;
+    height:67.48%;
+}
+
+/* Position and size for the top solid rocket booster */
+.rocket-srb-top{
+    left:0%;
+    top:-13%;
+    width:59.82%;
+    height:32.52%;
+}
+
+/* Position and size for the bottom solid rocket booster */
+.rocket-srb-bottom{
+    left:0%;
+    top:80%;
+    width:59.82%;
+    height:32.52%;
+}
+
+/* Position and size for the Orion spacecraft */
+.rocket-orion{
+    left: 78%;
+    top: 32%;
+    width: 22%;
+    height: 36%;
+}
+
+/* Core stage decoupling animation on hover */
+.rocket-core:hover{
+    transform: translateY(-6px) scale(1.01);
     filter: drop-shadow(0 0 15px rgba(214,104,83,0.6));
 }
 
-.rocket-orion.active{
-    transform: translateY(-70px) scale(1.05);
+/* Orion spacecraft decoupling animation on hover */
+.rocket-orion:hover{
+    transform: translateX(20px) scale(1.05);
     filter: drop-shadow(0 0 15px rgba(255,255,255,0.6));
 }
 
-.rocket-srb-left.active{
-    transform: translate(-40px, 60px) rotate(-8deg);
-    opacity:0.6;
+/* Top SRB decoupling animation on hover */
+.rocket-srb-top:hover{
+    transform: translateY(-28px) rotate(-4deg);
+    opacity:0.7;
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.4));
 }
 
-.rocket-srb-right.active{
-    transform: translate(40px, 60px) rotate(8deg);
-    opacity:0.6;
+/* Bottom SRB decoupling animation on hover */
+.rocket-srb-bottom:hover{
+    transform: translateY(28px) rotate(4deg);
+    opacity:0.7;
+    filter: drop-shadow(0 0 12px rgba(255,255,255,0.4));
 }
 
+/* Caption text below the interactive rocket */
 .sls-caption{
     margin-top:40px;
     font-family:"Polarix";
@@ -1297,5 +1388,5 @@ body{
     min-height:60px;
     max-width:800px;
     transition: opacity 0.25s ease;
+
 }
- 
