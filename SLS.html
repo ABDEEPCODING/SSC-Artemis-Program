@@ -1,10 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Space Launch System</title>
 </head>
 <body>
 <div id="container">
@@ -16,14 +18,11 @@
         <a href="https://www.nasa.gov/humans-in-space/artemis/"><img class="artemis-logo" src="Assets/Artemis_logo.webp"></a>
         <img class="ACREW" title="Artemis II Crew: Reid, Goggins, Christina, Jeremy"src="Assets/artemis-ii-crew-Photoroom.webp">
     </div><!--header-->
-
 <div id="navbar">
     <div class="nav-item fly-left"><a href="about_ssc.html">ABOUT SSC</a></div>
     <div class="sep fly-left">|</div>
-
     <div class="nav-item fly-left"><a href="index.html">HOME</a></div>
     <div class="sep fly-left">|</div>
-
     <div class="nav-item drop">
         <button class="dropdownbtn fly-left">MORE ABOUT ARTEMIS</button>
         <div class="drop-content fly-left">
@@ -44,35 +43,93 @@
         spacecraft and large cargo on a single mission toward the Moon and deeper destinations. As the backbone of NASA's 
         return to deep-space exploration, the SLS enables the long-term goal of building a sustainable human presence beyond 
         Earth.</p>
-    
+
 </div>
 
 <div id="SLS-Interactive">
+    <h2 class="sls-interactive-header fly-up">Hover a part to explore</h2>
     <div id="Interactive_Area">
+        <img class="rocket-layer rocket-orion"   src="Assets/Orion-Capsule.png"    alt="Orion Spacecraft">
+        <img class="rocket-layer rocket-core"    src="Assets/Core-Stage.png"     alt="Core Stage">
+        <img class="rocket-layer rocket-srb-left"  src="Assets/SRB-1.png"  alt="Solid Rocket Booster (left)">
+        <img class="rocket-layer rocket-srb-right" src="Assets/SRB-2.png" alt="Solid Rocket Booster (right)">
 
+        <!-- Invisible hotspots: positioned/sized as % of the canvas to match
+
+             where each part actually sits. Tune these % values once you have
+
+             the real art -- use devtools to check pixel coords against your
+
+             2000x800 (or whatever) export canvas, then convert to %. -->
+
+        <div class="hotspot" data-target="srb-left"
+             style="left:27.5%; top:31.25%; width:7.5%; height:37.5%;"
+             data-label="Solid Rocket Booster — provides over 75% of the thrust at liftoff, then detaches.">
+            </div>
+
+        <div class="hotspot" data-target="srb-right"
+             style="left:65%; top:31.25%; width:7.5%; height:37.5%;"
+             data-label="Solid Rocket Booster — provides over 75% of the thrust at liftoff, then detaches."></div>
+
+        <div class="hotspot" data-target="core"
+             style="left:35%; top:37.5%; width:30%; height:25%;"
+             data-label="Core Stage — the backbone of the SLS, fueling the climb out of Earth's atmosphere."></div>
+
+        <div class="hotspot" data-target="upper"
+             style="left:70%; top:41.25%; width:10%; height:17.5%;"
+             data-label="Upper Stage — carries Orion the rest of the way after the core stage separates."></div>
+
+        <div class="hotspot" data-target="orion"
+             style="left:80%; top:43.75%; width:7.5%; height:12.5%;"
+             data-label="Orion Spacecraft — the crew capsule that carries astronauts to deep space and back."></div>
     </div>
+
+    <p class="sls-caption" id="sls-caption">Hover over any part of the rocket above.</p>
 </div>
+
 
 <div id="footer">
 
+
+
 <div class="footerheading-wrap">
+
 <a href="https://github.com/ABDEEPCODING" class="footerheading">
+
     <img src="Assets/github-icon.png" alt="" class="github-icon">
+
     @AB_DEEPCODING on Github
+
 </a>
+
 </div>
+
+
+
+
 
 
 
 </div><!--Footer-->
 
 
+
+
+
     
+
 </div><!--Container-->
 
 
 
+
+
+
+
 <script src="script.js"></script>
+
     
+
 </body>
+
 </html>
