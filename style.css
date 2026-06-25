@@ -509,7 +509,6 @@ body{
     transform-origin:bottom center;
 }
 
-
 .footerheading::after{
     content:'';
     position:absolute;
@@ -525,7 +524,6 @@ body{
     width:100%;
 }
 
-
 .footerheading:hover{
     transform:scale(1.06);
     text-shadow:
@@ -537,8 +535,6 @@ body{
 .footerheading:active{
     transform:scale(0.97);
 }
-
-
 
 #artemis-main{
     background-image:url(Assets/Artemis_intro.webp) ;
@@ -567,8 +563,6 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 
 }
-
-
 
 .artemis-main-paragraph{
     font-family:"Polarix";
@@ -645,18 +639,17 @@ body{
 
 }
 
-
 #Artemis-1-Stats:hover{
     transform:  scale(1.03);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
-
 
 .Stats-heading{
     text-align:left;
     padding-top:21px;
     padding-left:23px;
 }
+
 .statsheading{
     font-family:'Rostex';
     color:#D66853;
@@ -906,8 +899,6 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
-
-
 .separatorjr{
     width:270px;
     margin-left:80px;
@@ -916,7 +907,6 @@ body{
     border-color:#D66853;
     transition: transform 0.25s cubic-bezier(0.25,0.1,0.25,1), filter 0.25s ease;
 }
-
 
 .astronautcard:hover .Astronaut_Name{
     filter: drop-shadow(0 0 8px rgba(214,104,83,1));
@@ -937,8 +927,6 @@ body{
     filter: drop-shadow(0 0 8px rgba(214,104,83,1));
     transform:scaleX(1.3);
 }
-
-
 
 .astronautinfo{
     text-align:center;
@@ -964,8 +952,6 @@ body{
     
 }
 
-
-
 .Artemis-II-Crew-Images-Grid img:hover{
     transform:scale(1.03);
     filter: drop-shadow(0 0 8px rgba(214,104,83,1));
@@ -976,8 +962,6 @@ body{
     transform:scale(0.98);
 
 }
-
-
 
 #artemis-3{
     background-image:url(Assets/starship-hls.webp) ;
@@ -1173,8 +1157,8 @@ body{
 }
 
 .SSC-icon{
-    width:300px;
-    height:300px;
+    width:200px;
+    height:200px;
     position:absolute;
     left:20px;
     top:50%;
@@ -1198,3 +1182,5 @@ body{
     transform: translateY(-390px) scale(0.8);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
+
+
