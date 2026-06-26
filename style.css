@@ -70,30 +70,33 @@ body{
     src: local('Rostex'), url(Fonts/RostexRegular-m2r22.woff) format('woff');
 }
 
+/* Primary body styling with background color and horizontal overflow prevention */
 body{
     background-color:#11151C;
     overflow-x: hidden;
 }
 
+/* Initial hidden state for elements designed to slide in from the left */
 .fly-left{
     opacity:0;
     transform: translateX(-30px);
     transition: opacity 0.8s ease, transform 1.6s ease;
 }
 
-
-
+/* Initial hidden state for elements designed to slide in from the right */
 .fly-right{
     opacity:0;
     transform: translateX(30px);
     transition: opacity 0.8s ease, transform 1.6s ease;
 }
 
+/* State applied to trigger visibility and reset the transform position during animation */
 .fly-in-visible{
     opacity:1;
     transform: translateX(0);
 }
 
+/* Main header container featuring a background banner with a subtle dark overlay and performance-optimized rendering */
 #header{
     background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url(Assets/website-banner.webp);
     height:155px;
@@ -112,6 +115,7 @@ body{
     backface-visibility: hidden;
 }
 
+/* Primary heading typography with multi-layered shadows for depth and smooth transition properties for interaction */
 .heading{
     font-family:"nasalization";
     color:whitesmoke;
@@ -132,6 +136,7 @@ body{
     cursor:pointer;
 }
 
+/* Hover effect for the heading that increases scale and adds a luminous white glow */
 .heading:hover{
     transform: scale(1.06);
     text-shadow:
@@ -140,6 +145,7 @@ body{
         0 0 30px rgba(255,255,255,0.3);
 }
 
+/* Tactile active state for the main heading that shrinks slightly and maintains the glow effect when clicked */
 .heading:active{
     transform: scale(0.97);
     text-shadow:
@@ -148,6 +154,7 @@ body{
         0 0 30px rgba(255,255,255,0.3);
 }
 
+/* Wrapper for the heading to handle alignment, centering, and specific layout offsets within the header */
 .heading-wrap{
     display:flex;
     justify-content:center;
@@ -158,6 +165,7 @@ body{
     box-sizing:border-box;
 }
 
+/* Fixed positioning and dimensions for the SSC logo on the left side of the header */
 .SSC{
     width:140px;
     height:140px;
@@ -167,6 +175,7 @@ body{
     transform:translateY(-50%);
 }
 
+/* Fixed positioning and dimensions for the Artemis logo, placed adjacent to the SSC logo */
 .artemis-logo{
     width:140px;
     position:absolute;
@@ -175,6 +184,7 @@ body{
     transform:translateY(-50%);
 }
 
+/* Transition and interaction properties for brand logos to ensure smooth scaling and glow effects */
 .SSC,
 .artemis-logo{
     transition: transform 0.25s cubic-bezier(0.25, 0.1, 0.25, 1),
@@ -184,18 +194,21 @@ body{
     z-index:20;
 }
 
+/* Interactive hover state that scales the logos and applies a subtle outer glow */
 .SSC:hover,
 .artemis-logo:hover{
     transform: translateY(-50%) scale(1.05);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
+/* Tactile active state feedback that slightly shrinks the logos upon being clicked */
 .SSC:active,
 .artemis-logo:active{
     transform: translateY(-50%) scale(0.97);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
+/* Positioning and performance optimization for the crew-related visual element */
 .ACREW{
     width:400px;
     position:absolute;
@@ -205,6 +218,7 @@ body{
     will-change: transform;
 }
 
+/* Navigation bar layout with background color, borders, and centralized flex alignment */
 #navbar{
     background:#D66853;
     border-top:4px solid #7d4e57;
@@ -218,6 +232,7 @@ body{
     z-index:10;
 }
 
+/* Typography and visual styling for navigation links and dropdown buttons, including multi-layered text shadows */
 .nav-item a,
 .dropdownbtn{
     color:white;
@@ -237,17 +252,19 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Transition properties for smooth scaling and color changes on interaction */
 #navbar .nav-item a,
 #navbar .dropdownbtn{
     transition: transform 0.2s ease, color 0.2s ease;
 }
-
+/* Interactive hover effects for navbar links and dropdown triggers */
 #navbar .nav-item a:hover,
 #navbar .dropdownbtn:hover{
     transform: scale(1.05);
     text-shadow: 0 0 8px rgba(255,255,255,0.5);
 }
 
+/* Styling for the separator elements positioned between navigation items */
 .sep{
     color:#7d4e57;
     font-size:20px;
@@ -257,10 +274,12 @@ body{
     padding:0 5px;
 }
 
+/* Relative container to anchor the absolute positioning of dropdown content */
 .drop{
     position:relative;
 }
 
+/* Hidden container for dropdown menus, revealed on hover */
 .drop-content{
     position:absolute;
     display:none;
@@ -274,6 +293,7 @@ body{
     z-index:20;
 }
 
+/* Typography and spacing for links inside the dropdown menu */
 .drop-content a{
     padding:10px;
     display:block;
@@ -286,10 +306,12 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Toggles the visibility of the dropdown menu when the parent container is hovered */
 .drop:hover .drop-content{
     display:block;
 }
 
+/* Background and layout configuration for the first information section featuring the SLS launch */
 #infosection1{
     background-image:url(Assets/SLS-Launching.webp);
     height:900px;
@@ -303,12 +325,14 @@ body{
     padding:120px 8% 0 8%;
 }
 
+/* Typography and styling for the primary heading in the first information section */
 .infoheading{
     font-family:'Rostex';
     font-size:60px;
     z-index:10;
     color:white;
     margin-bottom:30px;
+    /* Multi-layered shadow effect to ensure text stands out against the dynamic background */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -317,12 +341,14 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Typography and styling for the heading in the second information section */
 .infoheading2{
     font-family:'Rostex';
     font-size:60px;
     z-index:10;
     color:white;
     margin-bottom:30px;
+    /* Consistent shadow layers to maintain visual depth across different headings */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -331,12 +357,14 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Layout container for information content with a maximum width and stacking priority */
 .informationsection{
     max-width:800px;
     position:relative;
     z-index:10;
 }
 
+/* Typography and positioning for the information text in the first section */
 .information1{
     font-family:"Polarix";
     color:white;
@@ -344,6 +372,7 @@ body{
     text-align:center;
     position:relative;
     z-index:1;
+    /* Multi-layered shadow effect for depth and legibility */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -352,6 +381,7 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Background and layout configuration for the second information section */
 #infosection2{
     background-image: url(Assets/SLS_Home.webp);
     height:900px;
@@ -365,12 +395,14 @@ body{
     padding:120px 8% 0 8%;
 }
 
+/* Styling for the text in section two, including specific alignment adjustments */
 .information2{
     font-family:"Polarix";
     color:white;
     font-size:30px;
     margin-left:-100px;
     text-align:center;
+    /* Consistent shadow layers to match the overall site aesthetic */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -393,12 +425,14 @@ body{
     padding:120px 8% 0 8%;
 }
 
+/* Typography and styling for the heading in the third information section */
 .infoheading-III{
     font-family:'Rostex';
     font-size:60px;
     z-index:10;
     color:white;
     margin-bottom:30px;
+    /* Multi-layered shadow effect to ensure text stands out against the background */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -407,11 +441,13 @@ body{
         0 0 40px rgba(0,0,0,0.1);
 }
 
+/* Styling for the descriptive text in section three, featuring right-alignment */
 .information3{
     font-family:"Polarix";
     color:white;
     font-size:30px;
     text-align:right;
+    /* Consistent shadow layers for depth and legibility */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -444,11 +480,13 @@ body{
     filter 0.25s ease;
 }
 
+/* Slightly scales the link and adds a subtle glow effect on hover */
 .interactive-hyperlink:hover{
     transform: scale(1.05);
     filter: drop-shadow(0 0 8px rgba(255,255,255,0.5));
 }
 
+/* Vertically stacks buttons with consistent spacing and a top margin */
 .button-stack{
     display: flex;
     flex-direction: column;
@@ -456,6 +494,7 @@ body{
     margin-top:20px;
 }
 
+/* Provides tactile feedback by slightly shrinking the link when clicked */
 .interactive-hyperlink:active{
     transform: scale(0.97);
 }
@@ -500,11 +539,12 @@ body{
     transition: transform 0.25s ease;
 }
 
+/* Rotates the GitHub icon a full 360 degrees when the user hovers over the footer heading */
 .footerheading:hover .github-icon{
     transform: rotate(360deg);
 }
 
-/* Footer Heading and Hover Effects */
+/* Footer Heading Styling */
 .footerheading{
     display:block;
     font-family:"nasalization";
@@ -529,7 +569,7 @@ body{
     transition:transform .25s cubic-bezier(.25,.1,.25,1), text-shadow .25s ease;
     transform-origin:bottom center;
 }
-
+/*footer heading animation after clicking on it*/
 .footerheading::after{
     content:'';
     position:absolute;
@@ -541,10 +581,12 @@ body{
     transition: width 0.3s ease;
 }
 
+/* Expand the decorative underline to full width on hover */
 .footerheading:hover::after{
     width:100%;
 }
 
+/* Scale the footer heading and apply a luminous text shadow on hover */
 .footerheading:hover{
     transform:scale(1.06);
     text-shadow:
@@ -553,6 +595,7 @@ body{
         0 0 30px rgba(255,255,255,0.3);
 }
 
+/* Slight shrink effect when clicking the footer heading for tactile feedback */
 .footerheading:active{
     transform:scale(0.97);
 }
@@ -570,36 +613,34 @@ body{
     justify-content:flex-start;
     padding-top:80px;
 }
-
-.artemis-main-header{
-    font-family:'Rostex';
-    color:white;
-    font-size:7rem;
-    text-align:center;
-    margin:0 0 30px 0;
+/* Shared styling for Artemis main header and paragraph, featuring layered shadows for depth */
+.artemis-main-header,
+.artemis-main-paragraph {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    /* Multi-layered shadow effect to ensure readability against the background image */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
         0 0 20px rgba(0,0,0,0.4),
         0 0 30px rgba(0,0,0,0.2),
         0 0 40px rgba(0,0,0,0.1);
-
 }
 
-.artemis-main-paragraph{
-    font-family:"Polarix";
-    text-align:center;
-    color:white;
-    width:1200px;
-    font-size:50px;
-    margin-bottom:30px;
-    text-shadow:
-        0 0 5px rgba(0,0,0,0.8),
-        0 0 10px rgba(0,0,0,0.6),
-        0 0 20px rgba(0,0,0,0.4),
-        0 0 30px rgba(0,0,0,0.2),
-        0 0 40px rgba(0,0,0,0.1);
-    flex-shrink:0;
+/* Typography and sizing for the primary Artemis introduction header */
+.artemis-main-header {
+    font-family: 'Rostex';
+    font-size: 7rem;
+    margin-top: 0;
+}
+
+/* Styling for the main descriptive paragraph in the Artemis introduction section */
+.artemis-main-paragraph {
+    font-family: "Polarix";
+    font-size: 3.125rem;
+    width: 1200px;
+    flex-shrink: 0;
 }
 
 /* Artemis Section 1 Styles */
@@ -616,12 +657,14 @@ body{
     padding-top:80px;
 }
 
+/* Styling for the Artemis 1 section header including typography and layered shadows */
 .artemis-1-header{
     font-family:'Rostex';
     color:white;
     font-size:10rem;
     text-align:center;
     margin:0 0 30px 0;
+    /* Multi-layered shadow effect for depth and readability */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -631,6 +674,7 @@ body{
 
 }
 
+/* Main descriptive paragraph styling for the Artemis 1 section */
 .artemis-1-main{
     font-family:"Polarix";
     text-align:center;
@@ -638,6 +682,7 @@ body{
     width:1400px;
     font-size:2.8125rem;
     margin-bottom:30px;
+    /* Consistent shadow styling for readability against backgrounds */
     text-shadow:
         0 0 5px rgba(0,0,0,0.8),
         0 0 10px rgba(0,0,0,0.6),
@@ -646,8 +691,6 @@ body{
         0 0 40px rgba(0,0,0,0.1);
     flex-shrink:0;
 }
-
-/* Artemis 1 Statistics Card Styles */
 #Artemis-1-Stats{
     background-color:#1f286c;
     width:1350px;
@@ -949,7 +992,7 @@ body{
     justify-content:flex-start;
     padding-top:80px;
     gap:10px;
-}   
+}
 
 /* Horizontal line separator with color and expansion transition */
 .separatorjr{

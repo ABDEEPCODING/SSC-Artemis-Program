@@ -1,74 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <!-- Favicon for browser tab -->
     <link rel="icon" type="image/x-icon" href="Assets/favicon.ico">
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Character encoding -->
     <meta charset="UTF-8">
+
+    <!-- Responsive scaling for mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>About US</title>
 </head>
+
 <body>
+
 <div id="container">
+
+    <!-- ================= HEADER ================= -->
     <div id="header">
+
+        <!-- Centered ARTEMIS title -->
         <div class="heading-wrap">
-        <a href="index.html" class="heading fly-left">ARTEMIS</a>
+            <a href="index.html" class="heading fly-left">ARTEMIS</a>
         </div>
-        <a href="about_ssc.html"><img class="SSC" src="Assets/Sancta Space Club.webp" alt="Sancta Space Club logo"></a>
-        <a href="https://www.nasa.gov/humans-in-space/artemis/" target="_blank"><img class="artemis-logo fly-right" src="Assets/Artemis_logo.webp" alt="NASA Artemis program logo"></a>
-        <img class="ACREW" title="Artemis II Crew: Reid, Goggins, Christina, Jeremy" alt="Artemis II Crew: Reid, Goggins, Christina, Jeremy" src="Assets/artemis-ii-crew-Photoroom.webp">
-    </div><!--header-->
 
-<div id="navbar">
-    <div class="nav-item fly-left"><a href="about_ssc.html">ABOUT SSC</a></div>
-    <div class="sep fly-left">|</div>
+        <!-- Sancta Space Club logo (links back to this page) -->
+        <a href="about_ssc.html">
+            <img class="SSC" src="Assets/Sancta Space Club.webp" alt="Sancta Space Club logo">
+        </a>
 
-    <div class="nav-item fly-left"><a href="index.html">HOME</a></div>
-    <div class="sep fly-left">|</div>
+        <!-- NASA Artemis logo (opens in new tab) -->
+        <a href="https://www.nasa.gov/humans-in-space/artemis/" target="_blank">
+            <img class="artemis-logo fly-right" src="Assets/Artemis_logo.webp" alt="NASA Artemis program logo">
+        </a>
 
-    <div class="nav-item drop">
-        <button class="dropdownbtn fly-left">MORE ABOUT ARTEMIS</button>
-        <div class="drop-content fly-left">
-            <a href="Artemis.html">Artemis Missions</a>
-            <a href="SLS.html">Space Launch System</a>
+        <!-- Artemis II crew image -->
+        <img class="ACREW"
+             title="Artemis II Crew: Reid, Goggins, Christina, Jeremy"
+             alt="Artemis II Crew: Reid, Goggins, Christina, Jeremy"
+             src="Assets/artemis-ii-crew-Photoroom.webp">
+
+    </div>
+    <!-- =============== END HEADER =============== -->
+
+
+    <!-- ================= NAVBAR ================= -->
+    <div id="navbar">
+
+        <!-- Left nav items -->
+        <div class="nav-item fly-left"><a href="about_ssc.html">ABOUT SSC</a></div>
+        <div class="sep fly-left">|</div>
+        <div class="nav-item fly-left"><a href="index.html">HOME</a></div>
+        <div class="sep fly-left">|</div>
+        <!-- Dropdown menu -->
+        <div class="nav-item drop">
+            <button class="dropdownbtn fly-left">MORE ABOUT ARTEMIS</button>
+            <div class="drop-content fly-left">
+                <a href="Artemis.html">Artemis Missions</a>
+                <a href="SLS.html">Space Launch System</a>
+            </div>
+        </div>
+
+        <!-- Right nav items -->
+        <div class="sep fly-right">|</div>
+        <div class="nav-item fly-right"><a href="about_ssc.html">CONTACT US</a></div>
+
+    </div>
+    <!-- =============== END NAVBAR =============== -->
+
+
+    <!-- ============ MAIN CONTENT: ABOUT SSC ============ -->
+    <div class="ralphgamboa">
+
+        <!-- Large SSC icon -->
+        <img class="SSC-icon fly-left" src="Assets/Sancta Space Club.webp" alt="Sancta Space Club logo">
+        <!-- Section heading -->
+        <h1 class="SSC-Header fly-left">About Sancta Space Club</h1>
+        <!-- Main description paragraph -->
+        <p class="SSC-P fly-right">
+            The Sancta Space Club is a space where students passionate about aeronautics and space science
+            can come together to share findings, have rocket competitions, and hang out with people who
+            share your passion for aerospace. You can sign up to join the Sancta Space Club through the
+            Schoology link and receive a badge.
+        </p>
+        <!-- Button linking to Sancta Maria College website -->
+        <div id="button-wrapper1">
+            <a href="https://www.sanctamaria.school.nz/" class="interactive-hyperlink fly-left">
+                Join SSC
+            </a>
         </div>
     </div>
-    <div class="sep fly-right">|</div>
-    <div class="nav-item fly-right"><a href="about_ssc.html">CONTACT US</a></div>
-</div>
+    <!-- ============ END MAIN CONTENT ============ -->
 
-<div class="ralphgamboa">
-    <img class="SSC-icon fly-left" src="Assets/Sancta Space Club.webp" alt="Sancta Space Club logo">
-    <h1 class="SSC-Header fly-left">About Sancta Space Club</h1>
-
-    <p class="SSC-P fly-right">The Sancta Space Club is a space where students passionate about 
-        aeronautics and Space Science can come together to share findings, have rocket 
-        competitions and to hangout with people who share your passion for aeronautics. You can 
-        sign up to join the Sancta Space Club in the schoology link and get a badge.
-    </p>
-        
-    <div id="button-wrapper1"><a href="https://www.sanctamaria.school.nz/" class="interactive-hyperlink fly-left">Join SSC</a></div>
-
-  
-</div>
-</div>
-<div id="footer">
-
-<div class="footerheading-wrap">
-<a href="https://github.com/ABDEEPCODING" class="footerheading">
-    <img src="Assets/github-icon.png" alt="" class="github-icon">
-    @AB_DEEPCODING on Github
-</a>
-</div>
-
-</div><!--Footer-->
-
-
-    
 </div><!--Container-->
 
 
+<!-- ================= FOOTER ================= -->
+<div id="footer">
 
+    <div class="footerheading-wrap">
+        <!-- GitHub link -->
+        <a href="https://github.com/ABDEEPCODING" class="footerheading">
+            <img src="Assets/github-icon.png" alt="" class="github-icon">
+            @AB_DEEPCODING on Github
+        </a>
+    </div>
+</div>
+<!-- =============== END FOOTER =============== -->
+
+
+<!-- External JS file -->
 <script src="script.js"></script>
-    
+
 </body>
 </html>
